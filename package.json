@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "start:all": "concurrently \"cd Services\\\\E-com && pnpm dev --port 3001\" \"cd Services\\\\E-Learning && pnpm dev --port 3002\" \"cd Services\\\\Food-Delivery && pnpm dev --port 3003\" \"cd Services\\\\Healthcare && pnpm dev --port 3004\" \"cd Services\\\\TravelTourism && pnpm dev --port 3005\" \"cd Services\\\\Wholesale && pnpm dev --port 3006\""
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
@@ -64,6 +65,7 @@
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^9.2.0",
     "postcss": "^8.5",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
